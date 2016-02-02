@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kuangch.blurdemo.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/blurred_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clipChildren="false">
+
+        <RelativeLayout
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/img">
+
+        </RelativeLayout>
+
+        <!--<TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="100sp"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_centerInParent="true"
+            android:text="0" />-->
+    </RelativeLayout>
+
+    <com.fivehundredpx.android.blur.BlurringView
+        android:id="@+id/blurring_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        app:blurRadius="11"
+        app:downsampleFactor="3"
+        app:overlayColor="#99FFFFFF" />
+
+</RelativeLayout>
